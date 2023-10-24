@@ -1,0 +1,67 @@
+.card {
+  cursor: pointer;
+  width: 182px;
+  height: 264px;
+  background-color: #1a1a1a;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.card:hover {
+  background-color: #2b2b2b;
+  transition: .5s;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, .7);
+}
+
+.textLabel {
+  max-width: 150px;
+  height: 26px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 0 0 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.textArtist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  max-height: 35px;
+  color: #a1a1a1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.textArtist:hover {
+  text-decoration: underline;
+}
+
+.imagePlayCircle {
+  position: absolute;
+  display: block;
+  left: 95px;
+  top: 95px;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .7);
+  border-radius: 50%;
+}
+
+.imagePlayCircle:hover {
+  transform: scale(1.05);
+}
