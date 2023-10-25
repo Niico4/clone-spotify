@@ -1,8 +1,9 @@
 import { Card } from '@mui/material';
-import React, { FC, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import styles from './Card.module.css';
+import React, { FC, useState } from 'react';
+
 import imagenPlayCircle from '../../../../public/mock/playButton.png';
+import styles from './Card.module.css';
 
 interface Props {
   imageURL: string | StaticImageData;
@@ -41,7 +42,7 @@ const MyCardPlayList: FC<Props> = ({
       <div style={{ lineHeight: 1.3 }}>
         <p className={styles.textLabel}>{label}</p>
 
-        <a href="#" className={styles.textArtist}>
+        <a href="undefined" className={styles.textArtist}>
           {artistsName}
         </a>
       </div>

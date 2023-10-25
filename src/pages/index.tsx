@@ -1,6 +1,8 @@
-import Sidebar from '@/components/Layout/Sidebar/index';
-import MainScreen from '@/components/MainScreen';
 import React from 'react';
+
+import Sidebar from '../components/Layout/Sidebar/index';
+import MainScreen from '../components/MainScreen';
+import PlayBarComponent from '../components/PlayBar';
 
 const Main = () => {
   return (
@@ -13,10 +15,12 @@ const Main = () => {
         gridTemplateColumns: '420px 1fr',
         gap: '8px',
         padding: '8px',
+        gridTemplateRows: '1fr 72px',
       }}
     >
       <Sidebar />
       <MainScreen />
+      <PlayBarComponent />
     </div>
   );
 };

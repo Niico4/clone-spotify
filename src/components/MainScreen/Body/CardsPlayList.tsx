@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
-import styles from '../styles/MainScreen.module.css';
 
 import {
-  imageSouthPark,
   imageHoraDeAventura,
   imageLosCien,
   imageNiico,
   imageRickAndMorty,
+  imageSouthPark,
   imageUnShowMas,
 } from '../../../../public/mock/index';
-import MyCardPlayList from '@/components/atoms/CardPlayList';
+import MyCardPlayList from '../../atoms/CardPlayList';
+import styles from '../styles/MainScreen.module.css';
 
 interface Props {
   title: string;
@@ -20,10 +20,10 @@ const CardsPlayListComponent: FC<Props> = ({ title }) => {
     <div style={{ marginBottom: '30px' }}>
       <div className={styles.wrapperSubTitleAndSubTitleAncle}>
         <h2 className={styles.subTitle}>
-          <a href="#">{title}</a>
+          <a href="undefined">{title}</a>
         </h2>
         <p className={styles.subTitleAncle}>
-          <a href="#">Mostrar todos</a>
+          <a href="undefined">Mostrar todos</a>
         </p>
       </div>
       <div className={styles.wrapperCardsPlayList}>

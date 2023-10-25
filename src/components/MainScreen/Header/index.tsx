@@ -15,10 +15,10 @@ const HeaderScreen = () => {
   return (
     <styled.Container>
       <div className={styles.wrapperButtonsBackAndNext}>
-        <button disabled className={styles.buttonsBackAndNext}>
+        <button type="button" disabled className={styles.buttonsBackAndNext}>
           <Icon component={ArrowNavigateBackIcon} size={34} />
         </button>
-        <button disabled className={styles.buttonsBackAndNext}>
+        <button type="button" disabled className={styles.buttonsBackAndNext}>
           <Icon component={ArrowNavigateNextIcon} size={34} />
         </button>
       </div>
@@ -30,6 +30,7 @@ const HeaderScreen = () => {
         </styled.ButtonDownloadApp>
         <Tooltip title="Novedades">
           <button
+            type="button"
             className={`${styles.buttonNotification} ${styles.buttonsHover}`}
           >
             <Icon component={NotificationIcon} size={20} />
@@ -37,7 +38,10 @@ const HeaderScreen = () => {
         </Tooltip>
 
         <Tooltip title="Niico">
-          <button className={`${styles.buttonProfile} ${styles.buttonsHover}`}>
+          <button
+            type="button"
+            className={`${styles.buttonProfile} ${styles.buttonsHover}`}
+          >
             <Image
               src={imageProfile}
               alt="profile image"

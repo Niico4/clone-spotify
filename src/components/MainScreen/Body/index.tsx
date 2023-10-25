@@ -1,6 +1,7 @@
 import React from 'react';
-import CardsPlayListComponent from './CardsPlayList';
+
 import styles from '../styles/MainScreen.module.css';
+import CardsPlayListComponent from './CardsPlayList';
 
 const BodyMainScreen = () => {
   return (
