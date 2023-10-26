@@ -9,24 +9,26 @@ import {
   imageUnShowMas,
 } from '../../../../public/mock/index';
 import MyCardPlayList from '../../atoms/CardPlayList';
-import styles from '../styles/MainScreen.module.css';
+
+import useStyles from './styles';
 
 interface Props {
   title: string;
 }
 
 const CardsPlayListComponent: FC<Props> = ({ title }) => {
+  const { classes } = useStyles();
   return (
     <div style={{ marginBottom: '30px' }}>
-      <div className={styles.wrapperSubTitleAndSubTitleAncle}>
-        <h2 className={styles.subTitle}>
+      <div className={classes.wrapperTitles}>
+        <h2 className={classes.subTitle}>
           <a href="undefined">{title}</a>
         </h2>
-        <p className={styles.subTitleAncle}>
+        <p className={classes.ancle}>
           <a href="undefined">Mostrar todos</a>
         </p>
       </div>
-      <div className={styles.wrapperCardsPlayList}>
+      <div className={classes.wrapperCardsPlayList}>
         <MyCardPlayList
           imageURL={imageSouthPark}
           altText="south park"

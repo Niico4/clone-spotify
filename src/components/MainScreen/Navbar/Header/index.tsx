@@ -2,8 +2,8 @@ import Image, { StaticImageData } from 'next/image';
 import React, { FC, useState } from 'react';
 
 import imagenPlayCircle from '../../../../../public/mock/playButton.png';
-import styles from '../../styles/MainScreen.module.css';
-import styled from './style';
+
+import useStyles from './styles';
 
 interface Props {
   imageURL: string | StaticImageData;
@@ -12,30 +12,28 @@ interface Props {
 }
 
 const HeaderNavBar: FC<Props> = ({ imageURL, altText, titlePlayList }) => {
+  const { classes } = useStyles();
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <styled.Container
+    <button
+      className={classes.root}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className={styles.wrapperImage}>
-        <Image
-          src={imageURL}
-          alt={altText}
-          className={styles.imagePlayListHeaderNavBar}
-        />
-        <span className={styles.titlePlayList}>{titlePlayList}</span>
+      <div className={classes.wrapperImage}>
+        <Image src={imageURL} alt={altText} className={classes.image} />
+        <span className={classes.title}>{titlePlayList}</span>
       </div>
 
       {isHovered && (
         <Image
           src={imagenPlayCircle}
           alt="play button"
-          className={styles.imagePlayCircle}
+          className={classes.imagePlayCircle}
         />
       )}
-    </styled.Container>
+    </button>
   );
 };
 

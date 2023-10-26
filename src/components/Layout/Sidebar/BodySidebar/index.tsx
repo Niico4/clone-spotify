@@ -7,57 +7,58 @@ import {
   imageRickAndMorty,
   imageSouthPark,
   imageUnShowMas,
-} from '../../../../public/mock/index';
-import LibraryBodyComponent from './Library/Body';
-import LibraryHeaderComponent from './Library/Header';
-import SidebarPlayList from './Library/PlayListSection';
-import styles from './styles/Sidebar.module.css';
-import styled from './styles/style';
+} from '../../../../../public/mock/index';
+import LibraryHeaderComponent from '../HeaderSidebar/index';
+import PlayListComponent from '../PlayListSection';
+
+import LibraryBodyComponent from './Body';
+import useStyles from './styles';
 
 const SidebarBody = () => {
+  const { classes } = useStyles();
   return (
-    <styled.ContainerLibrary>
+    <section className={classes.root}>
       <LibraryHeaderComponent />
-      <styled.WrapperBody>
+      <div className={classes.wrapperBody}>
         <LibraryBodyComponent />
 
-        <div className={styles.wrapperPlayList}>
-          <SidebarPlayList
+        <div className={classes.wrapperPlayList}>
+          <PlayListComponent
             imageURL={imageNiico}
             altText="list Niico"
             titlePlayList="Niico"
             typeList="Lista"
             author="Niico"
           />
-          <SidebarPlayList
+          <PlayListComponent
             imageURL={imageSouthPark}
             altText="list south park"
             titlePlayList="Rap"
             typeList="Lista"
             author="Niico"
           />
-          <SidebarPlayList
+          <PlayListComponent
             imageURL={imageRickAndMorty}
             altText="list rick and morty"
             titlePlayList="Mezclas"
             typeList="Lista"
             author="Niico"
           />
-          <SidebarPlayList
+          <PlayListComponent
             imageURL={imageHoraDeAventura}
             altText="list hora de aventura"
             titlePlayList="Hip Hop"
             typeList="Álbum"
             author="Tupac Shakur"
           />
-          <SidebarPlayList
+          <PlayListComponent
             imageURL={imageUnShowMas}
             altText="list un show mas"
             titlePlayList="Reggae"
             typeList="Lista"
             author="Niico"
           />
-          <SidebarPlayList
+          <PlayListComponent
             imageURL={imageLosCien}
             altText="list los 100"
             titlePlayList="Canciones que te gustan"
@@ -65,8 +66,8 @@ const SidebarBody = () => {
             author="Niico"
           />
         </div>
-      </styled.WrapperBody>
-    </styled.ContainerLibrary>
+      </div>
+    </section>
   );
 };
 

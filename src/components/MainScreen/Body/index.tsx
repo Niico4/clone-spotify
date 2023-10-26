@@ -1,11 +1,12 @@
 import React from 'react';
 
-import styles from '../styles/MainScreen.module.css';
 import CardsPlayListComponent from './CardsPlayList';
+import useStyles from './styles';
 
 const BodyMainScreen = () => {
+  const { classes } = useStyles();
   return (
-    <div className={styles.wrapperCardsPlayListComponents}>
+    <div className={classes.root}>
       <CardsPlayListComponent title="Hecho para Niico" />
       <CardsPlayListComponent title="Tus mixes más escuchados" />
       <CardsPlayListComponent title="Escuchado recientemente" />

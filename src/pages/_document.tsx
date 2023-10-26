@@ -10,11 +10,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link
-            rel="shortcut icon"
-            href="/iconSpotify.ico"
-            type="image/x-icon"
-          />
+          <link rel="icon" href="/iconSpotify.ico" type="image/x-icon" />
           <title>Clone Spotify</title>
         </Head>
         <body>

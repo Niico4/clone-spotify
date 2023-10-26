@@ -29,7 +29,7 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'import'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/jsx-props-no-spreading': 'off',
@@ -46,5 +46,25 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'react/require-default-props': [
+      'error',
+      { ignoreFunctionalComponents: true },
+    ],
+
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+        ],
+        'newlines-between': 'always',
+      },
+    ],
+    'react/button-has-type': 'off',
   },
 };

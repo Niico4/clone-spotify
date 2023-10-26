@@ -8,30 +8,30 @@ import ArrowNavigateBackIcon from '../../atoms/icons/ArrowNavigateBack';
 import ArrowNavigateNextIcon from '../../atoms/icons/ArrowNavigateNext';
 import DownloadIcon from '../../atoms/icons/Download';
 import NotificationIcon from '../../atoms/icons/Notification';
-import styles from '../styles/MainScreen.module.css';
-import styled from './style';
+
+import useStyles from './styles';
 
 const HeaderScreen = () => {
+  const { classes } = useStyles();
   return (
-    <styled.Container>
-      <div className={styles.wrapperButtonsBackAndNext}>
-        <button type="button" disabled className={styles.buttonsBackAndNext}>
+    <header className={classes.root}>
+      <div className={classes.wrapperButtonsArrows}>
+        <button disabled className={classes.buttonArrow}>
           <Icon component={ArrowNavigateBackIcon} size={34} />
         </button>
-        <button type="button" disabled className={styles.buttonsBackAndNext}>
+        <button disabled className={classes.buttonArrow}>
           <Icon component={ArrowNavigateNextIcon} size={34} />
         </button>
       </div>
 
-      <div className={styles.wrapperButtonsIcons}>
-        <styled.ButtonDownloadApp className={styles.buttonsHover}>
+      <div className={classes.wrapperButtonsIcons}>
+        <button className={`${classes.buttonDownload} ${classes.buttonsHover}`}>
           <Icon component={DownloadIcon} color="#FFF" size={20} />
           <span>Instalar app</span>
-        </styled.ButtonDownloadApp>
+        </button>
         <Tooltip title="Novedades">
           <button
-            type="button"
-            className={`${styles.buttonNotification} ${styles.buttonsHover}`}
+            className={`${classes.buttonNotification} ${classes.buttonsHover}`}
           >
             <Icon component={NotificationIcon} size={20} />
           </button>
@@ -39,18 +39,17 @@ const HeaderScreen = () => {
 
         <Tooltip title="Niico">
           <button
-            type="button"
-            className={`${styles.buttonProfile} ${styles.buttonsHover}`}
+            className={`${classes.buttonProfile} ${classes.buttonsHover}`}
           >
             <Image
               src={imageProfile}
               alt="profile image"
-              className={styles.imageButtonProfile}
+              className={classes.image}
             />
           </button>
         </Tooltip>
       </div>
-    </styled.Container>
+    </header>
   );
 };
 

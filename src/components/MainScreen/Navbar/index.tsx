@@ -8,11 +8,13 @@ import {
   imageSouthPark,
   imageUnShowMas,
 } from '../../../../public/mock/index';
-import styles from '../styles/MainScreen.module.css';
+
 import HeaderNavBar from './Header';
+import useStyles from './styles';
 
 const NavBarSection = () => {
-  const [greeting, setGreeting] = useState('');
+  const { classes } = useStyles();
+  const [greetingMessage, setGreetingMessage] = useState('');
 
   useEffect(() => {
     const now = new Date();
@@ -28,13 +30,13 @@ const NavBarSection = () => {
       messageGreeting = '¡Buenas noches!';
     }
 
-    setGreeting(messageGreeting);
+    setGreetingMessage(messageGreeting);
   }, []);
 
   return (
     <section>
-      <h1 className={styles.mainTitle}>{greeting}</h1>
-      <div className={styles.wrapperHeaderNavBar}>
+      <h1 className={classes.title}>{greetingMessage}</h1>
+      <div className={classes.wrapperCards}>
         <HeaderNavBar
           imageURL={imageNiico}
           altText="list Niico"

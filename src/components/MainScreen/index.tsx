@@ -3,11 +3,12 @@ import React from 'react';
 import BodyMainScreen from './Body';
 import HeaderScreen from './Header';
 import NavBarSection from './Navbar';
-import styles from './styles/MainScreen.module.css';
+import useStyles from './styles';
 
 const MainScreen = () => {
+  const { classes } = useStyles();
   return (
-    <div className={`${styles.mainContainer} ${styles.scroll}`}>
+    <div className={`${classes.root} ${classes.scroll}`}>
       <HeaderScreen />
       <div style={{ padding: '0 24px' }}>
         <NavBarSection />
