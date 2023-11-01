@@ -5,20 +5,21 @@ import useStyles from './styles';
 
 interface Props {
   imageURL: string | StaticImageData;
-  altText: string;
   titlePlayList: string;
+  altText: string;
   typeList: string;
   author: string;
 }
 
 const PlayListComponent: FC<Props> = ({
   imageURL,
-  altText,
   titlePlayList,
+  altText,
   typeList,
   author,
 }) => {
   const { classes } = useStyles();
+
   return (
     <section className={classes.root}>
       <div className={classes.wrapperComponent}>
@@ -26,7 +27,7 @@ const PlayListComponent: FC<Props> = ({
           <Image src={imageURL} alt={altText} className={classes.image} />
         </figure>
         <div className={classes.wrapperText}>
-          <p className={classes.paragraph}>{titlePlayList}</p>
+          <p className={classes.titlePlayList}>{titlePlayList}</p>
           <span className={classes.span}>
             {typeList} • {author}
           </span>

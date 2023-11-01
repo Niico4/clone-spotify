@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { imageSouthPark } from '../../../public/mock/index';
 import Icon from '../atoms/icon';
 import PlayCircleIcon from '../atoms/icons/PlayCircle';
 import RandomIcon from '../atoms/icons/Random';
 import RepeatIcon from '../atoms/icons/Repeat';
 import SkipNextIcon from '../atoms/icons/SkipNext';
 import SkipPreviousIcon from '../atoms/icons/SkipPrevious';
-import { imageSouthPark } from '../../../public/mock/index';
 
 import CardSongComponent from './CardSong';
 import SettingSongComponent from './SettingSong';

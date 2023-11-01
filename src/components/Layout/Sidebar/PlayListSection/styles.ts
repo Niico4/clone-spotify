@@ -41,7 +41,7 @@ const useStyles = tss.create({
     borderRadius: '6px',
   },
 
-  paragraph: {
+  titlePlayList: {
     fontSize: '16px',
     color: '#fff',
     fontWeight: 500,

@@ -66,5 +66,7 @@ module.exports = {
       },
     ],
     'react/button-has-type': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+    'import/prefer-default-export': 'off',
   },
 };
