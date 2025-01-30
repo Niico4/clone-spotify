@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+
+  --brand-green: #1ed760;
+
+  --bg-primary: #121212;
+  --bg-secondary: #1f1f1f;
+  --bg-overlay: hsla(0, 0%, 100%, 0.1);
+}
